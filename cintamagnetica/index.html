@@ -49,19 +49,16 @@
 
         <!-- Card de Oferta e Preços -->
         <div class="offer-card">
-            <span class="offer-badge" style="background-color: rgba(46, 213, 115, 0.1); color: var(--accent-color);">Promoção da Semana</span>
-            <div class="price-old">De R$ 249,90</div>
-            <div class="price-new">Por R$ 147,90</div>
+            <span class="offer-badge" style="background-color: rgba(46, 213, 115, 0.1); color: var(--accent-color);">Promoção Especial</span>
+            <div class="price-old">De R$ 199,90</div>
+            <div class="price-new" style="font-size: 2.2rem;">Por R$ 119,00</div>
             <div class="price-installments">Ou em 12x no cartão de crédito</div>
             
-            <!-- Botão de CTA com redirecionamento de segurança para Conversão de Clique -->
-            <!-- Substitua o href abaixo pelo link do checkout da Logzz/Kiwify quando configurado -->
-            <!-- O clique é rastreado utilizando uma label geral de clique se desejado -->
-            <a href="https://entrega.logzz.com.br/pay/memp7lm20/cinta-magnetica" 
+            <!-- Botão de CTA que rola para a seção de kits -->
+            <a href="#kits" 
                id="cta-topo" 
-               class="cta-button"
-               onclick="return registrarCliqueConversao('AW-18328327074/CLIQUE_PLACEHOLDER', this.href)">
-                QUERO APROVEITAR A OFERTA
+               class="cta-button">
+                VER KITS PROMOCIONAIS
             </a>
             
             <div class="cta-subtext">
@@ -196,21 +193,64 @@
             </details>
         </div>
 
-        <!-- Segundo Card de Oferta (Fechamento) -->
-        <div class="offer-card" style="margin-top: 40px;">
-            <div class="price-old">De R$ 249,90</div>
-            <div class="price-new">Por R$ 147,90</div>
-            <p style="margin-bottom: 20px; font-weight: 700; color: var(--primary-color);">🔥 Estoque Promocional Limitado!</p>
-            
-            <a href="https://entrega.logzz.com.br/pay/memp7lm20/cinta-magnetica" 
-               id="cta-baixo" 
-               class="cta-button"
-               onclick="return registrarCliqueConversao('AW-18328327074/CLIQUE_PLACEHOLDER', this.href)">
-                QUERO APROVEITAR A OFERTA
-            </a>
-            
-            <div class="cta-subtext">
-                👉 Não cobramos frete! Frete 100% grátis
+        <!-- Seção de Kits (Escolha o seu Kit) -->
+        <div id="kits" class="headline-container" style="margin-top: 50px;">
+            <h2 class="section-title">Escolha o seu Kit Promocional</h2>
+            <p class="subheadline">Selecione a melhor opção abaixo. O pagamento é feito apenas na entrega!</p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 40px;">
+            <!-- Kit 1: 1 Unidade -->
+            <div class="offer-card" style="margin-bottom: 0;">
+                <span class="offer-badge" style="background-color: rgba(116, 125, 140, 0.1); color: var(--text-muted);">Uso Pessoal</span>
+                <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px;">1 Unidade do Massageador EMS</h3>
+                <div class="price-old">De R$ 199,90</div>
+                <div class="price-new">Por R$ 119,00</div>
+                <div class="price-installments">Ou em 12x no cartão de crédito</div>
+                
+                <a href="https://entrega.logzz.com.br/pay/memrdvvdz/smfgv-1-cinto-magnetico-emagrecimento-full" 
+                   id="cta-kit-1" 
+                   class="cta-button"
+                   onclick="return registrarCliqueConversao('AW-18328327074/CLIQUE_KIT1', this.href)">
+                    COMPRAR 1 UNIDADE
+                </a>
+                <div class="cta-subtext">🚚 Frete Grátis incluso</div>
+            </div>
+
+            <!-- Kit 2: 2 Unidades -->
+            <div class="offer-card" style="margin-bottom: 0; border: 2px solid var(--primary-color);">
+                <span class="offer-badge" style="background-color: rgba(255, 71, 87, 0.1); color: var(--primary-color);">Melhor Custo-Benefício</span>
+                <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px;">Leve 2 Unidades (Dobre os Resultados)</h3>
+                <div class="price-old">De R$ 399,80</div>
+                <div class="price-new">Por R$ 350,00</div>
+                <div class="price-installments">Ou em 12x no cartão de crédito</div>
+                
+                <a href="https://entrega.logzz.com.br/pay/memrdvvdz/2-por-35000" 
+                   id="cta-kit-2" 
+                   class="cta-button"
+                   style="background: linear-gradient(135deg, var(--primary-color), #ff6b81); box-shadow: 0 8px 24px rgba(255, 71, 87, 0.25);"
+                   onclick="return registrarCliqueConversao('AW-18328327074/CLIQUE_KIT2', this.href)">
+                    COMPRAR 2 UNIDADES
+                </a>
+                <div class="cta-subtext">🚚 Frete Grátis + Entrega prioritária</div>
+            </div>
+
+            <!-- Kit 3: 15 Unidades -->
+            <div class="offer-card" style="margin-bottom: 0;">
+                <span class="offer-badge" style="background-color: rgba(46, 213, 115, 0.1); color: var(--accent-color);">Lote Atacado / Revenda</span>
+                <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px;">Lote Especial com 15 Unidades</h3>
+                <div class="price-old">De R$ 2.990,00</div>
+                <div class="price-new">Por R$ 1.150,00</div>
+                <div class="price-installments">Excelente margem para revenda física</div>
+                
+                <a href="https://entrega.logzz.com.br/pay/memrdvvdz/15-cintas" 
+                   id="cta-kit-3" 
+                   class="cta-button"
+                   style="background: linear-gradient(135deg, #2f3542, #57606f); box-shadow: 0 8px 24px rgba(47, 53, 66, 0.2);"
+                   onclick="return registrarCliqueConversao('AW-18328327074/CLIQUE_KIT3', this.href)">
+                    COMPRAR 15 UNIDADES
+                </a>
+                <div class="cta-subtext">🚚 Envio seguro via Transportadora expressa</div>
             </div>
         </div>
     </div>
