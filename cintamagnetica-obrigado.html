@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedido Confirmado! - Compra Esperta Promoções</title>
+    <title>Pedido Confirmado! - Compra Esperta</title>
     
     <!-- Meta Robots para evitar indexação redundante de conversão -->
     <meta name="robots" content="noindex, nofollow">
@@ -11,9 +11,7 @@
     <!-- CSS Compartilhado (Caminho relativo ao nível raiz) -->
     <link rel="stylesheet" href="./assets/css/landing.css">
 
-    <!-- ========================================== -->
-    <!-- GOOGLE ADS GLOBAL TAG -->
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) - Apenas tag global para remarketing (evita duplicidade de conversão) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18328327074"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -22,16 +20,6 @@
 
       gtag('config', 'AW-18328327074');
     </script>
-
-    <!-- Event snippet for cintomagnetico conversion page -->
-    <script>
-      gtag('event', 'conversion', {
-          'send_to': 'AW-18328327074/aCWyCIiP29EcEKKn0KNE',
-          'transaction_id': ''
-          // 'new_customer': true /* calculate dynamically, populate with true/false */,
-      });
-    </script>
-    <!-- ========================================== -->
 </head>
 <body>
 
@@ -41,7 +29,7 @@
     </div>
 
     <div class="container">
-        <div class="thankyou-wrapper">
+        <div class="thankyou-wrapper" style="min-height: 50vh;">
             <!-- Ícone de Sucesso (Checkmark SVG) -->
             <div class="thankyou-icon">
                 <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -51,67 +39,15 @@
 
             <!-- Título e Texto principal -->
             <h1 class="thankyou-title">Tudo Pronto!</h1>
-            <p class="thankyou-text">
+            <p class="thankyou-text" style="max-width: 500px; margin-bottom: 20px;">
                 Obrigado pela sua compra. Seu pedido do <strong>Massageador Corporal EMS</strong> foi registrado no nosso sistema e já está sendo preparado pela logística da <strong>Compra Esperta</strong>.
-            </p>
-
-            <!-- Card de Resumo do Pedido -->
-            <div class="order-info-card">
-                <h3>Resumo do seu Pedido</h3>
-                
-                <div class="order-info-row">
-                    <span>Produto:</span>
-                    <strong>Massageador Corporal EMS (Kit Completo)</strong>
-                </div>
-                <div class="order-info-row">
-                    <span>Forma de Pagamento:</span>
-                    <strong style="color: #eccc68;">Pagar na Entrega (Entregador)</strong>
-                </div>
-                <div class="order-info-row">
-                    <span>Envio:</span>
-                    <strong>Frete Grátis (Sedex / Transportadora)</strong>
-                </div>
-                <div class="order-info-row">
-                    <span>Prazo de Entrega:</span>
-                    <strong>3 a 7 dias úteis</strong>
-                </div>
-                <div class="order-info-row" style="margin-top: 10px; border-top: 1px dashed rgba(0,0,0,0.1); padding-top: 10px;">
-                    <span>Total a Pagar:</span>
-                    <strong>Valor do Kit Selecionado</strong>
-                </div>
-            </div>
-
-            <!-- Próximos Passos -->
-            <div class="headline-container" style="margin-top: 10px;">
-                <h2 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;">Informações Importantes:</h2>
-                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; max-width: 450px;">
-                    • Fique atento ao seu celular: nossa equipe enviará uma mensagem de confirmação de endereço no seu <strong>WhatsApp</strong> em breve.<br>
-                    • Você não paga nada online! O pagamento do kit escolhido será feito ao entregador quando o produto chegar à sua residência.
-                </p>
-            </div>
-
-            <!-- Botão de Suporte WhatsApp -->
-            <div style="margin-top: 25px; width: 100%;">
-                <a href="https://wa.me/5517992510545?text=Olá!%20Acabei%20de%20solicitar%20o%20Massageador%20EMS%20e%20gostaria%20de%20confirmar%20meus%20dados." 
-                   class="cta-button" 
-                   style="background: linear-gradient(135deg, #25d366, #1ebd56); box-shadow: 0 8px 24px rgba(37, 211, 102, 0.2); animation: none;"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    FALAR COM SUPORTE NO WHATSAPP
-                </a>
-            </div>
-
-            <!-- Link de Retorno -->
-            <p style="margin-top: 25px;">
-                <a href="/" style="color: var(--primary-color); font-weight: 700; text-decoration: none;">← Voltar para o site principal</a>
             </p>
         </div>
     </div>
 
-    <!-- Rodapé -->
+    <!-- Rodapé Simplificado -->
     <footer class="landing-footer" style="background-color: var(--bg-white);">
         <p>Instagram: @compraesperta.promocoes</p>
-        <p>CNPJ: 58.635.785/0001-59</p>
     </footer>
 
 </body>
