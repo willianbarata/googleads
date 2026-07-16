@@ -1,0 +1,519 @@
+/* CSS Principal para Landing Pages - Compra Esperta Promoções */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
+
+:root {
+    --primary-color: #ff4757;      /* Cor de destaque/urgência (vermelho vivo/coral) */
+    --secondary-color: #2f3542;    /* Cor de fundo secundária/textos escuros */
+    --accent-color: #2ed573;       /* Cor de conversão (verde Whatsapp/sucesso) */
+    --bg-light: #f1f2f6;           /* Fundo claro para contrastes */
+    --bg-white: #ffffff;
+    --text-main: #2f3542;
+    --text-muted: #747d8c;
+    --font-family: 'Outfit', sans-serif;
+    --border-radius: 16px;
+    --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-white);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 1. Faixa de Urgência / Top Bar */
+.top-urgency-bar {
+    background: linear-gradient(90deg, #ff4757, #ff6b81);
+    color: var(--bg-white);
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: pulseBg 3s infinite alternate;
+}
+
+.top-urgency-bar span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 2. Container Geral */
+.container {
+    width: 100%;
+    max-width: 650px; /* Otimizado para visual mobile-first confortável no desktop */
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+/* 3. Cabeçalho / Branding */
+.landing-header {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.landing-header .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    letter-spacing: -0.5px;
+}
+
+.landing-header .logo span {
+    color: var(--primary-color);
+}
+
+/* 4. Elementos de Título e Chamadas */
+.headline-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.headline {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--secondary-color);
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.subheadline {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* 5. Mídia / Imagens e Vídeo */
+.media-container {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    margin-bottom: 25px;
+    background-color: #000;
+    position: relative;
+    aspect-ratio: 16 / 9;
+}
+
+.media-container.video-shorts {
+    aspect-ratio: 9 / 16;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.media-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    margin-bottom: 25px;
+    object-fit: cover;
+}
+
+/* 6. Seção de Oferta e Preços (Card de Conversão) */
+.offer-card {
+    background: var(--bg-white);
+    border: 2px solid #f1f2f6;
+    border-radius: var(--border-radius);
+    padding: 25px;
+    text-align: center;
+    box-shadow: var(--shadow-subtle);
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.offer-badge {
+    display: inline-block;
+    background-color: rgba(255, 71, 87, 0.1);
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.price-old {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+}
+
+.price-new {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.price-installments {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+/* Botão de Chamada para Ação (CTA) Principal */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    background: linear-gradient(135deg, #2ed573, #26af5f);
+    color: var(--bg-white);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 800;
+    padding: 16px 24px;
+    border-radius: 50px;
+    box-shadow: 0 8px 24px rgba(46, 213, 115, 0.3);
+    transition: var(--transition-smooth);
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: bounceCTA 2s infinite;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(46, 213, 115, 0.4);
+    background: linear-gradient(135deg, #26af5f, #1e90ff);
+}
+
+.cta-subtext {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* 7. Benefícios / Características */
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.benefits-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    background-color: var(--bg-light);
+    padding: 15px;
+    border-radius: 12px;
+    transition: var(--transition-smooth);
+}
+
+.benefit-item:hover {
+    transform: translateX(4px);
+    background-color: #e8eaf0;
+}
+
+.benefit-icon {
+    flex-shrink: 0;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.benefit-content strong {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.benefit-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* 8. Garantia & Segurança */
+.guarantee-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(47, 53, 66, 0.03);
+    border: 1px dashed rgba(47, 53, 66, 0.15);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+}
+
+.guarantee-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.guarantee-text h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 2px;
+}
+
+.guarantee-text p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* 9. FAQ / Perguntas Frequentes (Sem JavaScript) */
+.faq-accordion {
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border: 1px solid #f1f2f6;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.faq-item summary {
+    padding: 16px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    background-color: var(--bg-white);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    transition: var(--transition-smooth);
+}
+
+.faq-item[open] summary::after {
+    content: '−';
+    transform: rotate(180deg);
+}
+
+.faq-item[open] summary {
+    background-color: var(--bg-light);
+}
+
+.faq-content {
+    padding: 16px;
+    background-color: var(--bg-white);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    border-top: 1px solid #f1f2f6;
+    line-height: 1.5;
+}
+
+/* 10. WhatsApp Flutuante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: var(--transition-smooth);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+}
+
+/* 11. Footer */
+.landing-footer {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: var(--bg-light);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-top: 40px;
+}
+
+.landing-footer p {
+    margin-bottom: 8px;
+}
+
+.landing-footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 8px;
+}
+
+.landing-footer a:hover {
+    text-decoration: underline;
+}
+
+/* 12. Página de Obrigado */
+.thankyou-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.thankyou-icon {
+    font-size: 4.5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    animation: scaleIn 0.5s ease-out;
+}
+
+.thankyou-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+}
+
+.thankyou-text {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin-bottom: 30px;
+}
+
+.order-info-card {
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+    text-align: left;
+    margin-bottom: 30px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.order-info-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: var(--secondary-color);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding-bottom: 8px;
+}
+
+.order-info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.order-info-row:last-child {
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Animações */
+@keyframes pulseBg {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes bounceCTA {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
+@keyframes scaleIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsividade adicional */
+@media (max-width: 480px) {
+    .headline {
+        font-size: 1.5rem;
+    }
+    .price-new {
+        font-size: 2.1rem;
+    }
+    .cta-button {
+        font-size: 1.1rem;
+        padding: 14px 20px;
+    }
+}

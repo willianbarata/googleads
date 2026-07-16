@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Confirmado! - Compra Esperta Promoções</title>
+    
+    <!-- Meta Robots para evitar que motores de busca indexem a página de obrigado sem compras reais -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Folha de Estilos Reutilizável -->
+    <link rel="stylesheet" href="../assets/css/landing.css">
+
+    <!-- ========================================== -->
+    <!-- TAG DE CONVERSÃO DE COMPRA (GOOGLE ADS) -->
+    <!-- Para ativar o rastreamento de conversão, descomente as linhas abaixo (remova o <!-- e -->) -->
+    <!-- e substitua os códigos de exemplo pelos seus reais fornecidos pelo Google Ads -->
+    
+    <!-- Google tag (gtag.js) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-SEU_CONVERSION_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-SEU_CONVERSION_ID');
+    </script>
+
+    <!-- Disparo da Conversão de Compra -->
+    <script>
+      gtag('event', 'conversion', {
+          'send_to': 'AW-SEU_CONVERSION_ID/LABEL_DA_CONVERSAO',
+          'value': 159.90, // Substitua pelo valor real do seu produto se necessário
+          'currency': 'BRL',
+          'transaction_id': '' // Opcional
+      });
+    </script>
+    -->
+    <!-- ========================================== -->
+</head>
+<body>
+
+    <!-- Faixa de Confirmação Superior -->
+    <div class="top-urgency-bar" style="background: linear-gradient(90deg, #2ed573, #26af5f);">
+        <span>🎉 PEDIDO CONFIRMADO COM SUCESSO!</span>
+    </div>
+
+    <div class="container">
+        <div class="thankyou-wrapper">
+            <!-- 1. Ícone de Sucesso Animado (Checkmark SVG) -->
+            <div class="thankyou-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+
+            <!-- 2. Mensagem de Boas-Vindas -->
+            <h1 class="thankyou-title">Sua compra foi registrada!</h1>
+            <p class="thankyou-text">
+                Muito obrigado por comprar na <strong>Compra Esperta</strong>. Seu pedido já está sendo processado por nossa equipe de logística.
+            </p>
+
+            <!-- 3. Card de Resumo do Pedido -->
+            <div class="order-info-card">
+                <h3>Detalhes do seu Pedido</h3>
+                
+                <div class="order-info-row">
+                    <span>Produto:</span>
+                    <strong>Trena Laser Profissional</strong>
+                </div>
+                <div class="order-info-row">
+                    <span>Status do Pagamento:</span>
+                    <strong style="color: #eccc68;">Pagar na Entrega</strong>
+                </div>
+                <div class="order-info-row">
+                    <span>Envio:</span>
+                    <strong>Frete Grátis (Sedex/Transportadora)</strong>
+                </div>
+                <div class="order-info-row">
+                    <span>Prazo de Entrega:</span>
+                    <strong>3 a 7 dias úteis</strong>
+                </div>
+                <div class="order-info-row" style="margin-top: 10px; border-top: 1px dashed rgba(0,0,0,0.1); padding-top: 10px;">
+                    <span>Total do Pedido:</span>
+                    <span>R$ 159,90</span>
+                </div>
+            </div>
+
+            <!-- 4. Próximos Passos -->
+            <div class="headline-container" style="margin-top: 10px;">
+                <h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px;">Próximos Passos:</h2>
+                <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; max-width: 450px;">
+                    1. Nós enviaremos uma mensagem de confirmação no seu <strong>WhatsApp</strong> nas próximas horas.<br>
+                    2. Quando o entregador chegar à sua residência, faça o pagamento direto a ele.<br>
+                    3. Pronto! Simples, seguro e sem riscos.
+                </p>
+            </div>
+
+            <!-- 5. CTA para Suporte WhatsApp -->
+            <div style="margin-top: 25px; width: 100%;">
+                <a href="https://wa.me/5599999999999?text=Olá!%20Acabei%20de%20fazer%20um%20pedido%20da%20Trena%20Laser%20e%20gostaria%20de%20confirmar." 
+                   class="cta-button" 
+                   style="background: linear-gradient(135deg, #25d366, #1ebd56); box-shadow: 0 8px 24px rgba(37, 211, 102, 0.2); animation: none;"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    FALAR COM SUPORTE NO WHATSAPP
+                </a>
+            </div>
+
+            <!-- 6. Link para Voltar ao Catálogo -->
+            <p style="margin-top: 25px;">
+                <a href="/" style="color: var(--primary-color); font-weight: 700; text-decoration: none;">← Voltar para o site principal</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="landing-footer" style="background-color: var(--bg-white);">
+        <p><strong>Compra Esperta Promoções</strong></p>
+        <p>Instagram @compraesperta.promocoes</p>
+    </footer>
+
+</body>
+</html>
